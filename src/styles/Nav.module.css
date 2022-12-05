@@ -1,0 +1,214 @@
+.nav {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 2rem 0;
+  background-color: transparent;
+}
+
+.nav img {
+  background-color: transparent;
+  width: 11rem;
+  height: 3.6rem;
+  object-fit: cover;
+}
+
+.wide-screen-nav {
+  width: 70%;
+  background-color: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.wide-screen-nav .nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.4rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--clr-grey-1);
+  letter-spacing: 1px;
+}
+
+.wide-screen-nav .nav-links li a {
+  color: inherit;
+  border-bottom: 2px solid transparent;
+}
+
+.wide-screen-nav .nav-links li a:hover {
+  border-bottom: 2px solid var(--clr-primary-4);
+}
+
+.wide-screen-nav .cart {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  margin-right: 1.6rem;
+  color: var(--clr-black);
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+.wide-screen-nav .basket {
+  position: relative;
+}
+
+.wide-screen-nav .num-products {
+  position: absolute;
+  font-size: 0.8rem;
+  font-weight: 700;
+  top: -40%;
+  right: -50%;
+  padding: 0.2rem 0.4rem;
+  border-radius: 100%;
+  background-color: var(--clr-primary-5);
+  color: var(--clr-white);
+  z-index: 1;
+}
+
+.wide-screen-nav .btn-log-status {
+  font-family: inherit;
+  gap: 0.3rem;
+  letter-spacing: 1px;
+  border: none;
+  font-size: 1.4rem;
+  border-radius: 5px;
+  background-color: transparent;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.small-screen-nav {
+  display: none;
+}
+
+@media screen and (max-width: 1050px) {
+  .wide-screen-nav {
+    display: none;
+  }
+
+  .small-screen-nav {
+    display: inline-block;
+  }
+
+  .hamburger {
+    font-size: 1.8rem;
+    color: var(--clr-primary-4);
+    cursor: pointer;
+  }
+
+  .small-screen-nav.active .hamburger {
+    display: none;
+  }
+
+  .small-screen-nav .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 14rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+    background-color: var(--clr-white);
+    transform: translateX(-100%);
+    transition: transform 1s ease;
+  }
+
+  .small-screen-nav .sidebar .btn-close {
+    align-self: flex-end;
+    font-size: 1.4rem;
+    color: var(--clr-grey-4);
+    cursor: pointer;
+  }
+
+  .small-screen-nav .sidebar .btn-close:hover {
+    color: red;
+  }
+
+  .small-screen-nav .sidebar .nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+    font-size: 1.2rem;
+    color: var(--clr-grey-1);
+  }
+
+  .small-screen-nav .sidebar .nav-links li a {
+    color: inherit;
+    border-bottom: 2px solid transparent;
+  }
+
+  .small-screen-nav .sidebar .nav-links li a:hover {
+    border-bottom: 2px solid var(--clr-primary-4);
+  }
+
+  .small-screen-nav .sidebar .cart-logout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .small-screen-nav .sidebar .cart-logout .cart {
+    color: var(--clr-grey-1);
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+
+  .small-screen-nav .sidebar .cart-logout .cart .basket {
+    position: relative;
+  }
+
+  .small-screen-nav .sidebar .cart-logout .cart .basket .num-products {
+    position: absolute;
+    top: -0.8rem;
+    left: 0.8rem;
+    padding: 1px 4px;
+    border-radius: 50%;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--clr-white);
+    background-color: var(--clr-primary-4);
+  }
+
+  .small-screen-nav .sidebar .btn-log-status {
+    font-family: inherit;
+    background-color: transparent;
+    border: none;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+  }
+
+  .small-screen-nav.active .sidebar {
+    transform: translateX(0);
+  }
+}
+
+@media screen and (max-width: 365px) {
+  .nav img {
+    width: 7rem;
+    height: 2.4rem;
+  }
+  .hamburger {
+    font-size: 1.4rem;
+  }
+}

@@ -1,0 +1,129 @@
+.cell {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr auto;
+  align-items: center;
+  place-items: center;
+}
+
+.item-col {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+  justify-self: start;
+  width: 100%;
+}
+
+.item-col img {
+  width: 6.2rem;
+  height: 4.4rem;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.item-info {
+  text-transform: capitalize;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+}
+
+.item-title {
+  font-weight: 700;
+  display: block;
+}
+
+.color-box {
+  display: inline-block;
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 2px;
+}
+
+.item-price,
+.item-subtotal {
+  color: var(--clr-primary-5);
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  width: 100%;
+  text-align: center;
+}
+
+.small-screen-price {
+  color: var(--clr-primary-5);
+  font-size: inherit;
+  letter-spacing: 1px;
+  display: none;
+}
+
+.item-quantity {
+  font-size: 1.4rem;
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+}
+
+.item-quantity button {
+  border: none;
+  background-color: transparent;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.item-quantity button:first-child {
+  margin-right: 0.4rem;
+}
+
+.item-quantity button:last-child {
+  margin-left: 0.4rem;
+}
+
+.item-subtotal {
+  color: var(--clr-grey-5);
+}
+
+.item-remove {
+  border: none;
+  background-color: red;
+  padding: 0.2rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.item-remove svg {
+  font-size: 1.2rem;
+  color: var(--clr-white);
+}
+
+@media screen and (max-width: 985px) {
+  .item-price,
+  .item-subtotal {
+    display: none;
+  }
+  .cell {
+    grid-template-columns: 1fr 1fr auto;
+  }
+  .small-screen-price {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .cell {
+    grid-template-columns: 2fr 1fr auto;
+  }
+  .item-quantity {
+    font-size: 1rem;
+  }
+  .item-quantity button {
+    font-size: 1.2rem;
+  }
+  .item-remove svg {
+    font-size: 0.8rem;
+  }
+  .item-info {
+    font-size: 0.7rem;
+  }
+  .item-col img {
+    width: 5.2rem;
+  }
+}

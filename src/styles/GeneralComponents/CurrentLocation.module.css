@@ -1,0 +1,36 @@
+.complete-path {
+  background-color: var(--clr-primary-10);
+  padding: 2rem 4rem;
+  margin-bottom: 4.4rem;
+  font-size: 1.8rem;
+  text-transform: capitalize;
+  font-weight: bold;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  color: var(--clr-primary-4);
+}
+
+.complete-path span:last-child {
+  color: var(--clr-primary-1);
+}
+
+@media screen and (max-width: 705px) {
+  .complete-path {
+    padding: 1rem 2rem;
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (max-width: 525px) {
+  .complete-path {
+    padding: 0.4rem 0.8rem;
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 435px) {
+  .complete-path {
+    padding: 0.3rem 0.6rem;
+    font-size: 1rem;
+  }
+}

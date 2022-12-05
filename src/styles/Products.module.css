@@ -1,0 +1,12 @@
+.products {
+  padding: 0 4rem;
+  display: flex;
+  gap: 1.2rem;
+}
+
+@media screen and (max-width: 735px) {
+  .products {
+    flex-direction: column;
+    padding: 0 1rem;
+  }
+}
