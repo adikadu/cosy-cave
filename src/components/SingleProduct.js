@@ -64,7 +64,6 @@ export default function SingleProduct() {
 
   const btnAddToCartHandler = (event) => {
     if (loading) return;
-    // check if product is already in the cart
     let isPresent = false;
     for (let i in cartItems) {
       if (cartItems[i].id === id) isPresent = true;

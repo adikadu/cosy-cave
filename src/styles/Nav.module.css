@@ -94,6 +94,7 @@
 
   .small-screen-nav {
     display: inline-block;
+    z-index: 2;
   }
 
   .hamburger {

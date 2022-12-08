@@ -119,11 +119,17 @@ export default function ProductsGrid() {
     <div className={classes["products"]}>
       <div className={classes["products-metadata"]}>
         <div className={classes["buttons"]}>
-          <button>
-            <RiLayoutGridFill onClick={() => setIsLandscape(false)} />
+          <button
+            className={!isLandscape ? classes["landscape-active"] : ""}
+            onClick={() => setIsLandscape(false)}
+          >
+            <RiLayoutGridFill />
           </button>
-          <button>
-            <BsList onClick={() => setIsLandscape(true)} />
+          <button
+            className={isLandscape ? classes["landscape-active"] : ""}
+            onClick={() => setIsLandscape(true)}
+          >
+            <BsList />
           </button>
         </div>
         <span>{localProductsList.length} Products Found</span>

@@ -1,15 +1,13 @@
 import classes from "../styles/About.module.css";
 import CurrentLocation from "./generalComponents/CurrentLocation";
+import heroBcg1 from "../images/hero-bcg.jpeg";
 
 export default function About() {
   return (
     <section className={classes["about"]}>
       <CurrentLocation locationArray={["home", "about"]} />
       <div className={classes["about-content"]}>
-        <img
-          src="https://react-course-comfy-sloth-store.netlify.app/static/media/hero-bcg.a876f19f.jpeg"
-          alt="about page"
-        />
+        <img src={heroBcg1} alt="about page" />
         <div className={classes["about-content-text"]}>
           <h2>our story </h2>
           <hr />

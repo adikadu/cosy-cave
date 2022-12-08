@@ -53,26 +53,26 @@ const filtersSlice = createSlice({
   initialState: initialFilterValues,
   reducers: {
     setSearchFilter(state, payolad) {
-      state.search = payolad.payload;
+      return { ...initialFilterValues, search: payolad.payload };
     },
 
     setCategoryFilter(state, payload) {
-      state.category = payload.payload;
+      return { ...initialFilterValues, category: payload.payload };
     },
 
     setCompanyFilter(state, payload) {
-      state.company = payload.payload;
+      return { ...initialFilterValues, company: payload.payload };
     },
 
     setColorsFilter(state, payload) {
-      state.color = payload.payload;
+      return { ...initialFilterValues, color: payload.payload };
     },
 
     setPriceFilter(state, payolad) {
-      state.price = payolad.payload;
+      return { ...initialFilterValues, price: payolad.payload };
     },
     setFreeShippingFilter(state, payolad) {
-      state.freeShipping = payolad.payload;
+      return { ...initialFilterValues, freeShipping: payolad.payload };
     },
     setToInitialValue(state) {
       return initialFilterValues;

@@ -1,7 +1,6 @@
 .gallery-card .image {
   width: 100%;
   height: 14rem;
-  aspect-ratio: 16/9;
   border-radius: 5px;
   overflow: hidden;
   position: relative;
@@ -11,6 +10,7 @@
 .gallery-card .image img {
   width: 100%;
   height: 100%;
+  aspect-ratio: 16/9;
   display: block;
   object-fit: cover;
   transition: transform 0.5s ease;
@@ -73,6 +73,7 @@
   align-items: center;
   justify-content: space-between;
   font-size: 1.2rem;
+  padding: 0 1rem;
 }
 
 .gallery-card .product-info span {
@@ -90,17 +91,19 @@
 
 .gallery-card-landscape {
   width: 100%;
-  display: flex;
-  gap: 2rem;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  column-gap: 2rem;
   align-items: center;
   justify-content: space-between;
 }
 
 .gallery-card-landscape img {
   display: block;
-  aspect-ratio: 16/9;
-  width: 100%;
+  width: 300px;
+  height: 13.4rem;
   object-fit: cover;
+  border-radius: 7px;
 }
 
 .gallery-card-landscape .product-info h2 {
@@ -140,11 +143,8 @@
 
 @media screen and (max-width: 1000px) {
   .gallery-card-landscape {
-    flex-direction: column;
-  }
-
-  .gallery-card-landscape img {
-    width: 100%;
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
   }
 }
 

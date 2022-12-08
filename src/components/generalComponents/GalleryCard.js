@@ -10,7 +10,7 @@ export default function GalleryCard(props) {
         <div className={classes["product-info"]}>
           <h2>{props.productName}</h2>
           <span>{props.productPrice}</span>
-          <p>{props.productDescription}</p>
+          <p>{`${props.productDescription.slice(0, 150)}...`}</p>
           <Link to={`/products/${props.id}`}>Details</Link>
         </div>
       </div>

@@ -182,7 +182,8 @@
 
 .small-images-layout {
   width: 100%;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
   gap: 1rem;
   align-items: center;
   justify-content: space-between;
@@ -190,9 +191,8 @@
 
 .small-images-layout img {
   width: 100%;
-  height: 100%;
+  height: 90px;
   object-fit: cover;
-  aspect-ratio: 13/9;
   border-radius: 5px;
   cursor: pointer;
 }

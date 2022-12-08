@@ -99,8 +99,19 @@ export default function Nav() {
                 </div>
               </div>
             </Link>
-            <button className={classes["btn-log-status"]}>
-              Logout <FaUserMinus />
+            <button
+              className={classes["btn-log-status"]}
+              onClick={userLoginHandler}
+            >
+              {state.loginStatus.status ? (
+                <>
+                  Logout <FaUserMinus />
+                </>
+              ) : (
+                <>
+                  Login <FaUserPlus />
+                </>
+              )}
             </button>
           </div>
           <ul className={classes["nav-links"]}>

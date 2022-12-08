@@ -17,7 +17,9 @@
 
 .feature-products-gallery {
   margin-bottom: 3.2rem;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
@@ -44,4 +46,16 @@
 .all-products-link:hover {
   background-color: var(--clr-primary-9);
   color: var(--clr-grey-2);
+}
+
+@media screen and (max-width: 1365px) {
+  .feature-products-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 955px) {
+  .feature-products-gallery {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

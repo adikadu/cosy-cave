@@ -13,21 +13,23 @@
   margin-bottom: 4.4rem;
 }
 
-.moto .moto-text {
+.moto-text {
   color: var(--clr-primary-1);
   width: 100%;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  /* display: grid;
+  grid-template-columns: repeat(2, 1fr); */
   margin-bottom: 3.2rem;
 }
 
-.moto .moto-text h3 {
+.moto-text h3 {
   color: inherit;
   width: 50%;
 }
 
-.moto .moto-text p {
+.moto-text p {
   color: var(--clr-primary-3);
   width: 50%;
   font-size: 1rem;
@@ -52,5 +54,13 @@
 
   .moto .cards {
     flex-wrap: wrap;
+  }
+
+  .moto-text {
+    flex-direction: column;
+  }
+  .moto-text p,
+  .moto-text h3 {
+    width: 100%;
   }
 }
